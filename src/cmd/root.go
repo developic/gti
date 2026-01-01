@@ -70,8 +70,8 @@ OPTIONS
 		}
 
 		totalChunks := defaultGroups * chunksPerGroup
+		// Handle language selection and save preference if changed
 		if language != "" {
-
 			if !internal.IsLanguageSupported(language) {
 				fmt.Fprintf(os.Stderr, "Error: Language '%s' is not supported. Use one of: english, spanish, french, german, japanese, russian, italian, portuguese, chinese, arabic, hindi, korean, dutch, swedish, czech, danish, finnish, greek, hebrew, hungarian, norwegian, polish, thai, turkish\n", language)
 				os.Exit(1)
@@ -100,6 +100,7 @@ func Execute() {
 }
 
 func init() {
+	// init sets up the root command flags and subcommands
 	cobra.OnInitialize(initConfig)
 
 	rootCmd.CompletionOptions.DisableDefaultCmd = false
@@ -128,6 +129,7 @@ func initConfig() {
 }
 
 func parseDuration(durationStr string) int {
+	// Parse duration string (e.g., "30s", "5m", or plain number) into seconds, defaulting to 60 if invalid
 	if duration, err := time.ParseDuration(durationStr); err == nil {
 		return int(duration.Seconds())
 	}
