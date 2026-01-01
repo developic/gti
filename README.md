@@ -138,7 +138,8 @@ gti config reset    # Reset to defaults
 
 ## Supported Languages
 
-GTI supports **25+ languages** for practice: English, Spanish, French, German, Japanese, Russian, Italian, Portuguese, Chinese, Arabic, Hindi, Korean, Dutch, Swedish, Czech, Danish, Finnish, Greek, Hebrew, Hungarian, Norwegian, Polish, Thai, Turkish.
+GTI supports **25+ languages** for practice:
+English, Spanish, French, German, Japanese, Russian, Italian, Portuguese, Chinese, Arabic, Hindi, Korean, Dutch, Swedish, Czech, Danish, Finnish, Greek, Hebrew, Hungarian, Norwegian, Polish, Thai, Turkish.
 
 ## Contributing
 
