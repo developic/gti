@@ -1,0 +1,11 @@
+Background: #F4A460
+Text Primary: #8B4513
+Text Secondary: #A0522D
+Correct: #DEB887
+Incorrect: #B22222
+Current: #FFFFFF
+Pending: #D2B48C
+Word Highlight: #CD853F
+Accent: #8B4513
+Border: #BC8F8F
+Status Bar: #E6D3A3
