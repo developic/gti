@@ -23,10 +23,13 @@ assets:
 
 .PHONY: rel
 rel:
-	GOOS=darwin GOARCH=amd64 go build -ldflags "-X gti/src/cmd.Version=$(VERSION)" -o gti-mac main.go
-	GOOS=linux GOARCH=amd64 go build -ldflags "-X gti/src/cmd.Version=$(VERSION)" -o gti-linux main.go
-	GOOS=linux GOARCH=arm go build -ldflags "-X gti/src/cmd.Version=$(VERSION)" -o gti-linux_arm main.go
-	GOOS=linux GOARCH=arm64 go build -ldflags "-X gti/src/cmd.Version=$(VERSION)" -o gti-linux_arm64 main.go
-	GOOS=darwin GOARCH=arm64 go build -ldflags "-X gti/src/cmd.Version=$(VERSION)" -o gti-mac_arm64 main.go
-	GOOS=windows GOARCH=arm64 go build -ldflags "-X gti/src/cmd.Version=$(VERSION)" -o gti-windows_arm64.exe main.go
-	GOOS=windows GOARCH=amd64 go build -ldflags "-X gti/src/cmd.Version=$(VERSION)" -o gti.exe main.go
+	# Linux 
+	GOOS=linux GOARCH=amd64 go build -ldflags "$(LDFLAGS)" -o gti-linux main.go
+	GOOS=linux GOARCH=arm64 go build -ldflags "$(LDFLAGS)" -o gti-linux_arm64 main.go
+
+	# macOS 
+	GOOS=darwin GOARCH=arm64 go build -ldflags "$(LDFLAGS)" -o gti-mac main.go
+
+	# Windows x64
+	GOOS=windows GOARCH=amd64 go build -ldflags "$(LDFLAGS)" -o gti.exe main.go
+
