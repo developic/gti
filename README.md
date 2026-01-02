@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/developic/gti/stargazers">
-    <img src="https://img.shields.io/github/stars/developic/gti.svg?color=brightgreen" alt="GitHub stars">
+    <img src="https://img.shields.io/github/stars/developic/gti?style=flat&cacheSeconds=60" alt="GitHub stars">
   </a>
   <a href="https://github.com/developic/gti/issues">
     <img src="https://img.shields.io/github/issues/developic/gti.svg?color=orange" alt="GitHub issues">
