@@ -38,12 +38,19 @@ mkdir -p /usr/local/bin /usr/local/share/man/man1 # Usually created by brew
 sudo curl -L https://github.com/developic/gti/releases/download/v1.0.0/gti-mac -o /usr/local/bin/gti && sudo chmod +x /usr/local/bin/gti
 sudo curl -o /usr/local/share/man/man1/gti.1.gz -L https://github.com/developic/gti/releases/download/v1.0.0/gti.1.gz
 ```
+### Windows
+```bash
+if (-Not (Test-Path "C:\Tools")) { New-Item -ItemType Directory -Path "C:\Tools" }; curl -L -o "$env:USERPROFILE\gti.exe" https://github.com/developic/gti/releases/download/v1.0.0/gti.exe; Move-Item -Force "$env:USERPROFILE\gti.exe" "C:\Tools\gti.exe"; if ($env:Path -notlike "*C:\Tools*") { [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Tools", [EnvironmentVariableTarget]::User) }
+```
 
 ## Uninstall
 ```bash
 sudo rm /usr/local/bin/gti /usr/share/man/man1/gti.1.gz
 ```
-
+### Windows
+```bash
+Remove-Item "C:\Tools\gti.exe" -Force
+```
 
 ## Features
 
