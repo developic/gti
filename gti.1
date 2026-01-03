@@ -1,0 +1,101 @@
+.TH GTI 1 "January 2026" "GTI" "Typing Test Application"
+.SH NAME
+gti \- fast, lightweight, terminal-based typing speed and practice application
+.SH SYNOPSIS
+.B gti
+[\fIOPTIONS\fR] [\fICOMMAND\fR]
+.SH DESCRIPTION
+.B GTI
+is a command-line typing test application designed for improving typing speed and accuracy. It provides various practice modes including timed tests, progressive challenges, custom text files, and random quotes. Track your progress with detailed statistics and customize your experience with multiple themes and language support.
+.SH COMMANDS
+.TP
+.B gti
+Start practice mode
+.TP
+.B gti quote
+Start with random quotes
+.TP
+.B gti challenge
+Progressive challenge with levels
+.TP
+.B gti statistics
+View detailed typing statistics
+.TP
+.B gti theme
+Manage color themes
+.TP
+.B gti config
+View and manage configuration
+.TP
+.B gti version
+Display version information
+.SH OPTIONS
+.TP
+.B \-n, \-\-chunks <count>
+Number of chunks per group (default: 2)
+.TP
+.B \-g, \-\-groups <count>
+Number of groups (default: 1)
+.TP
+.B \-c, \-\-custom <file>
+Start with custom text file
+.TP
+.B \-\-start <num>
+Start from paragraph number (for custom mode)
+.TP
+.B \-t, \-\-timed <time>
+Start timed mode (e.g., 30, 10s, 5m)
+.TP
+.B \-l, \-\-language <lang>
+Language for word generation
+.TP
+.B \-s, \-\-shortcuts
+Show shortcuts and exit
+.SH EXAMPLES
+.TP
+.B gti
+Start practice mode (2 chunks)
+.TP
+.B gti \-n 10
+Practice with 10 chunks per group
+.TP
+.B gti \-t 30
+Start 30-second timed test
+.TP
+.B gti \-c mytext.txt
+Practice with custom text file
+.SH KEYBOARD SHORTCUTS
+.TP
+Ctrl+C
+Force quit application
+.TP
+Ctrl+Q
+Quit with confirmation
+.TP
+Tab/Enter
+Submit completed text
+.TP
+Ctrl+R
+Restart current session
+.TP
+Esc
+Close overlays/Cancel operations
+.SH SUPPORTED LANGUAGES
+GTI supports 25+ languages for practice: English, Spanish, French, German, Japanese, Russian, Italian, Portuguese, Chinese, Arabic, Hindi, Korean, Dutch, Swedish, Czech, Danish, Finnish, Greek, Hebrew, Hungarian, Norwegian, Polish, Thai, Turkish.
+.SH THEMES
+GTI supports 25+ color themes for terminal customization, including default, dracula, solarized, and many more.
+.SH ENVIRONMENT
+.TP
+.B GTI_CONFIG_DIR
+Directory for configuration files (defaults to system config directory)
+.TP
+.B GTI_THEME
+Default theme to use
+.SH FILES
+Configuration files are stored in the user's config directory.
+.SH BUGS
+Report bugs at https://github.com/developic/gti/issues
+.SH AUTHOR
+Developic
+.SH LICENSE
+MIT License
