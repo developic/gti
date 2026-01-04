@@ -1,4 +1,5 @@
-# GTI
+
+# <p align="center">GTI</p>
 
 <p align="center">
   <a href="https://github.com/developic/gti-cli/stargazers">
@@ -15,18 +16,22 @@
   </a>
 </p>
 
-GTI (Graphical Typing Tool) is a fast, lightweight and terminal based typing speed and practice application.
+GTI (Graphical Typing Tool) is a fast, lightweight and terminal based typing speed and practice application. 
+> [!IMPORTANT] 
+> perfect for developers who want a minimal, distraction-free CLI experience.
 
-# Installation
+---
 
-## Build from Source
+## Installation
+
+### Build from Source
 ```bash
 git clone https://github.com/developic/gti-cli
 cd gti-cli
 go build -o gti main.go
 ```
 
-## Linux
+### Linux
 ```bash
 sudo curl -L https://github.com/developic/gti-cli/releases/download/v1.0.0/gti-linux -o /usr/local/bin/gti && sudo chmod +x /usr/local/bin/gti
 sudo curl -o /usr/share/man/man1/gti.1.gz -L https://github.com/developic/gti-cli/releases/download/v1.0.0/gti.1.gz
@@ -34,23 +39,32 @@ sudo curl -o /usr/share/man/man1/gti.1.gz -L https://github.com/developic/gti-cl
 
 ### macOS
 ```bash
-mkdir -p /usr/local/bin /usr/local/share/man/man1 # Usually created by brew
+mkdir -p /usr/local/bin /usr/local/share/man/man1
 sudo curl -L https://github.com/developic/gti-cli/releases/download/v1.0.0/gti-mac -o /usr/local/bin/gti && sudo chmod +x /usr/local/bin/gti
 sudo curl -o /usr/local/share/man/man1/gti.1.gz -L https://github.com/developic/gti-cli/releases/download/v1.0.0/gti.1.gz
 ```
+
 ### Windows
-```bash
-if (-Not (Test-Path "C:\Tools")) { New-Item -ItemType Directory -Path "C:\Tools" }; curl -L -o "$env:USERPROFILE\gti.exe" https://github.com/developic/gti-cli/releases/download/v1.0.0/gti.exe; Move-Item -Force "$env:USERPROFILE\gti.exe" "C:\Tools\gti.exe"; if ($env:Path -notlike "*C:\Tools*") { [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Tools", [EnvironmentVariableTarget]::User) }
+```powershell
+if (-Not (Test-Path "C:\Tools")) { New-Item -ItemType Directory -Path "C:\Tools" }; 
+curl -L -o "$env:USERPROFILE\gti.exe" https://github.com/developic/gti-cli/releases/download/v1.0.0/gti.exe; 
+Move-Item -Force "$env:USERPROFILE\gti.exe" "C:\Tools\gti.exe"; 
+if ($env:Path -notlike "*C:\Tools*") { [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Tools", [EnvironmentVariableTarget]::User) }
 ```
 
-## Uninstall
+### Uninstall
+
+#### Linux
 ```bash
 sudo rm /usr/local/bin/gti /usr/share/man/man1/gti.1.gz
 ```
-### Windows
-```bash
+
+#### Windows
+```powershell
 Remove-Item "C:\Tools\gti.exe" -Force
 ```
+
+---
 
 ## Features
 
@@ -63,6 +77,8 @@ Remove-Item "C:\Tools\gti.exe" -Force
 - **Multi-language Support**: Practice in 25+ languages including English, Spanish, French, German, Japanese, and more
 - **Theme System**: 25+ color themes for terminal customization
 - **Configuration Management**: Persistent settings and preferences
+
+---
 
 ## Usage
 
@@ -106,7 +122,6 @@ gti -c text.txt
 | `-s, --shortcuts` | Show shortcuts and exit |
 
 ### Examples
-
 ```bash
 # 30-second timed test
 gti -t 30
@@ -124,6 +139,8 @@ gti -l spanish
 gti -s
 ```
 
+---
+
 ## Configuration
 
 GTI stores configuration in your system's config directory. Use the `config` command to view and manage settings:
@@ -132,6 +149,8 @@ GTI stores configuration in your system's config directory. Use the `config` com
 gti config --view     # View current configuration
 gti config --reset    # Reset to defaults
 ```
+
+---
 
 ## Keyboard Shortcuts
 
@@ -143,21 +162,27 @@ gti config --reset    # Reset to defaults
 | `Ctrl+R` | Restart current session |
 | `Esc` | Close overlays/Cancel operations |
 
+---
+
 ## Supported Languages
 
-GTI supports **25+ languages** for practice:
+GTI supports **25+ languages**:  
 English, Spanish, French, German, Japanese, Russian, Italian, Portuguese, Chinese, Arabic, Hindi, Korean, Dutch, Swedish, Czech, Danish, Finnish, Greek, Hebrew, Hungarian, Norwegian, Polish, Thai, Turkish.
+
+---
 
 ## Contributing
 
 We welcome contributions! Here's how you can help:
 
-### Ways to Contribute
-- Report Bugs: Open an issue with detailed information
-- Suggest Features: Share your ideas for new features
-- Code Contributions: Submit pull requests with improvements
-- Documentation: Help improve documentation
+- **Report Bugs**: Open an issue with detailed information
+- **Suggest Features**: Share your ideas for new features
+- **Code Contributions**: Submit pull requests with improvements
+- **Documentation**: Help improve documentation
+
+---
 
 ## License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
