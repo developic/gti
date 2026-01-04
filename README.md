@@ -16,7 +16,8 @@
   </a>
 </p>
 
-GTI (Graphical Typing Tool) is a fast, lightweight and terminal based typing speed and practice application. 
+GTI (Graphical Typing Tool) is a fast, lightweight and terminal based typing speed and practice application.
+ 
 > [!IMPORTANT] 
 > perfect for developers who want a minimal, distraction-free CLI experience.
 
